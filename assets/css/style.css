@@ -1,7 +1,7 @@
 body, html {
     width: 100%;
     height: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'VT323', monospace;
 }
 
 body{
@@ -10,6 +10,20 @@ body{
     
 }
 
-h1, h2, h3, p {
+body {
+  
     color: white;
+}
+
+#main-header {
+    background-color:#27293f;
+}
+
+#main-game {
+    background-color: #02007e;
+    opacity: 0.6;
+}
+
+#how-to-play {
+    
 }
