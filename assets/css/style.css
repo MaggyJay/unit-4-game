@@ -6,6 +6,7 @@ body, html {
 
 body{
     background-image: url("../images/background_buster_sword.jpg");
+    background-size: 100% auto;
     /* background-color: aqua; */
     
 }
@@ -13,6 +14,17 @@ body{
 body {
   
     color: white;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+
+}
+
+#main-characters {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 #main-header {
