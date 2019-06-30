@@ -52,10 +52,19 @@ var sephiroth = {
     counterAttack: 15
 }
 
+// Selecting Main Character
+$(document).ready(function() {
+$("#main-characters").on("click", function () {
+    alert('This is to test if this function works!');
+    console.log('well I got something to work');
+});
 
+})
 // cloudStrife.calcAttackPower();
 console.log(cloudStrife.calcAttackPower());
 console.log(tifaLockhart.calcAttackPower());
+console.log(barretWallace.calcAttackPower());
+console.log(sephiroth.calcAttackPower());
 // console.log(cloudStrife.calcAttackPower); this syntax prints the function 
 // console.log(cloudStrife.calcAttackPower()); this actuallyp performs the function but also gives an undefined reuslt, maybe because function is empty? 
 console.log(cloudStrife.firstName);
