@@ -8,7 +8,7 @@ var cloudStrife = {
     calcAttackPower: function (ap) {
         console.log('This is a test to see if Im calling the function correctly.');
 
-       var ap = 6;
+       var ap = 12;
        return ap += ap;
 
 
@@ -26,6 +26,18 @@ var tifaLockhart = {
         return ap += ap;
     },
     counterAttack: 8
+}
+
+var barretWallace = {
+    firstName: "Barret",
+    lastName: "Wallace",
+    age: 35, 
+    hp: 130,
+    calcAttackPower: function(ap) {
+        var ap= 8;
+        return ap += ap;
+    },
+    counterAttack: 11
 }
 
 
