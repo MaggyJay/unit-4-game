@@ -40,6 +40,18 @@ var barretWallace = {
     counterAttack: 11
 }
 
+var sephiroth = {
+    firstName: "Seiphiroth",
+    lastName: undefined,
+    age: 27, 
+    hp: 170,
+    calcAttackPower: function(ap){
+        var ap= 20;
+        return ap += ap;
+    },
+    counterAttack: 15
+}
+
 
 // cloudStrife.calcAttackPower();
 console.log(cloudStrife.calcAttackPower());
