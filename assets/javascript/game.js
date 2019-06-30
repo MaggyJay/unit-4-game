@@ -52,11 +52,23 @@ var sephiroth = {
     counterAttack: 15
 }
 
+// Begin Jquery Code 
 // Selecting Main Character
 $(document).ready(function() {
+
 $("#main-characters").on("click", function () {
-    alert('This is to test if this function works!');
-    console.log('well I got something to work');
+
+    $("img").click(function() {
+         $(this).css ({border: '10px solid #000'});
+        })
+
+        // $("#remaining-characters").replaceWith ("#main-characters");
+    // $("#main-characters").appendTo("#remaining-characters");
+    // alert('This is to test if this function works!');
+    // $("img").click(function() {
+        // $(this).css ({border: '10px solid #000'});
+    // })
+   
 });
 
 })
