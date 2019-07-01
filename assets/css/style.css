@@ -25,6 +25,14 @@ img {
 #main-characters {
     padding-left: 10px;
     padding-right: 10px;
+    border-color: aqua;
+    border: 15px;
+    
+}
+#remaining-characters {
+    /* display:none; */
+    background: green;
+
 }
 
 #main-header {
