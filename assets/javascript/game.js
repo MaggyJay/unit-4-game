@@ -1,14 +1,15 @@
 //Audio
+// The below doesn't do anything but I'm assuming it's because there are web browser things in place to prevent audio from auto playing. Even when using the audioElement.play() it doesnt load. It only works when it's within a jquery function. 
 var audioElement = new Audio("assets/theme.mp3");
-audioElement.autoplay=true;
+audioElement.autoplay = true;
 audioElement.load();
- 
+
 
 // Objects
 
- var characters = {
+var characters = {
 
-    cloudStrife :  {
+    cloudStrife: {
         firstName: "Cloud",
         lastName: "Strife",
         avatar: "assets/images/Cloud_Portrait.jpg",
@@ -23,7 +24,7 @@ audioElement.load();
         counterAttack: 10
     },
 
-    tifaLockhart : {
+    tifaLockhart: {
         firstName: "Tifa",
         lastName: "Lockhart",
         avatar: "assets/images/Tifa_Portrait.jpg",
@@ -36,7 +37,7 @@ audioElement.load();
         counterAttack: 8
     },
 
-    barretWallace : {
+    barretWallace: {
         firstName: "Barret",
         lastName: "Wallace",
         avatar: "assets/images/Barret_Portrait.jpg",
@@ -49,7 +50,7 @@ audioElement.load();
         counterAttack: 11
     },
 
-    sephiroth : {
+    sephiroth: {
         firstName: "Seiphiroth",
         lastName: undefined,
         avatar: "assets/images/Sephiroth_Portrait.jpg",
@@ -61,82 +62,57 @@ audioElement.load();
         },
         counterAttack: 15
     }
- }
- 
- //audioElement.setAttribute("src", "assets/theme.mp3");
- 
+}
+
+var selectedCharacter; //this holds the selected character end user is playing as
+var enemiesAvailable= [] //this holds the remaining objects available to choose from as an enemy
+var defender; //this holds the selected enemy player has chosen from enemies available
+var charAvailable = characters; //this holds all my objects as its value is available characters to choose from 
+
 // Begin Jquery Code 
-// Selecting Main Character
 $(document).ready(function () {
 
-    // $('audioElement').play()
-    // //Link objects to js
+    $('#enemies-available').hide();
+    $('#enemy-character').hide();
 
-    var renderOne = function(character, renderArea, makeChar) {
-        //character: obj, renderArea: class/id, makeChar: string
-        var charDiv = $("<div class='character' data-name='" + character.name + "'>");
-        var charName = $("<div class='character-name'>").text(character.name);
-        var charImage = $("<img alt='image' class='character-image'>").attr("src", character.avatar);
-        var charHealth = $("<div class='character-health'>").text(character.health);
-        charDiv.append(charName).append(charImage).append(charHealth);
-    }
 
-    // function charObj (characters) {
-    //     characters.firstName= name;
-    //     characters.hp= hp;
-    //     characters.calcAttackPower()= ap;
-    //     characters.counterAttack=  ca;
-    //     characters.avatar= avatar;
-
-    // }
-    
 
     $('#Cloud').on('click', function () {
-        alert('Hey, you picked Cloud!');
+        alert('Hey, you picked Cloud!');//simply testing to make sure the function works
+
+        // audioElement.play(); this works
         
-        $('#Cloud' ).removeClass("main-characters").addClass("remaining-characters");
-         $('#enemies-available').show(); //this works but the others dont?
-         $('charDiv').appendTo('#enemy-chracter');
-         $('.main-character').hide();
+
+        $('#Tifa').removeClass("main-characters").addClass("remaining-characters");
+        $('#Barret').removeClass("main-characters").addClass("remaining-characters");
+        $('#Sephiroth').removeClass("main-characters").addClass("remaining-characters");
+        $('#Tifa').appendTo(".remaining-character1");
+        $('#Barret').appendTo(".remaining-character2");
+        $('#Sephiroth').appendTo(".remaining-character3");
+        
+        $('#enemies-available').show();
+
+        //The above technically works as expected but the text doesn't move. I'm not quite worried about that because information from the object is supposed to be showing like the name property for example. But this is just another example of how I'm unsure on how to link objects together with html along with my jquery. 
+
 
     });
 
-    
+      //The Cloud click function can be an example of how I expect the code to function and look from a front-end perspective. But how on earth can I do this for other characters? Let's say I wanted to select Tifa from remaining characters. Could I do an if/else statement? But how can I do an if-else statement when one of the arguments is a .click? Or if instead of playing Cloud I wanted to play as Sephiroth-- do I need if else using the above code? There has to be an eaiser way than that. 
 
-    // $('.character').on('click', function () {
-    //     $('#attack-button').hide();
-    // });
-
-    // $('button').on('click', function () {
-    //     alert('This is a working button');
-    // });
+      //For the most DRY code possible I need a function that recognizes that the images in the html are links to objects. Am I doing getElementById? Or perhaps I would do the attr() method somehow? 
 
 
-
-    // $("#main-characters").on("click", function () {
-
-    //     $("img").click(function () {
-    //         $(this).css({ border: '10px solid #000' });
-    //     })
-
-    //     // $("#remaining-characters").replaceWith ("#main-characters");
-    //     // $("#main-characters").appendTo("#remaining-characters");
-    //     // alert('This is to test if this function works!');
-    //     // $("img").click(function() {
-    //     // $(this).css ({border: '10px solid #000'});
-    //     // })
-
-    // });
-   
+     // audioElement.loop(); looping doesn't work regardless if this is in the jquery function or not
 })
 
 
-// cloudStrife.calcAttackPower();
+//DEBUGGING AREA
+
 console.log(cloudStrife.calcAttackPower());
 console.log(tifaLockhart.calcAttackPower());
 console.log(barretWallace.calcAttackPower());
 console.log(sephiroth.calcAttackPower());
 // console.log(cloudStrife.calcAttackPower); this syntax prints the function 
-// console.log(cloudStrife.calcAttackPower()); this actuallyp performs the function but also gives an undefined reuslt, maybe because function is empty? 
+// console.log(cloudStrife.calcAttackPower()); this actually performs the function but also gives an undefined result, maybe because function param is empty? 
 console.log(cloudStrife.firstName);
 

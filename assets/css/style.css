@@ -25,14 +25,18 @@ img {
 #main-characters {
     padding-left: 10px;
     padding-right: 10px;
-    border-color: aqua;
-    border: 15px;
+    
     
 }
-#remaining-characters {
+.remaining-characters,  {
     /* display:none; */
     background: green;
 
+}
+
+#enemies-available {
+     /* display: none; */
+    
 }
 
 #main-header {
@@ -40,8 +44,12 @@ img {
 }
 
 #main-game {
+    font-family: Verdana, sans-serif;
+    font-size: 12px;
     background-color: #02007e;
-    opacity: 0.6;
+    opacity: 0.8;
+    margin-left: 8%;
+    padding-left: 1%;
 }
 
 #how-to-play {
