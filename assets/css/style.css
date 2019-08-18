@@ -22,12 +22,21 @@ img {
 
 }
 
-#main-characters {
-    padding-left: 10px;
-    padding-right: 10px;
-    
+.character-image{
     
 }
+
+.character {
+    padding: 05px;
+    cursor: pointer;
+}
+.character-name {
+    text-align: center;
+  }
+  
+  .character-health {
+    text-align: center;
+  }
 .remaining-characters,  {
     /* display:none; */
     background: green;
