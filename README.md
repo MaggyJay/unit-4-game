@@ -10,9 +10,4 @@ I wanted to create a simple RPG game. I decided to choose a game I played as a k
 
 The game was created with HTML, CSS, JavaScript, and jQuery. 
 
-<<<<<<< HEAD
 For my approach in design I wanted it to be reminicsent of earlier basic 90 static RPG's and I wanted the color scheme to closely resemble the original 1997 FFVII game.
-=======
-For my approach in design I wanted it to be reminicsent of earlier basic 90 static RPG's and I wanted the color scheme to closely resemble the original 1997 FFVII game. 
-
->>>>>>> 3ba4dcf6f3fd0e9e90d38320ff572496362bdc3b
