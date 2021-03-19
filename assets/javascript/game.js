@@ -43,7 +43,7 @@ $(document).ready(function () {
             attack: 20,
             counterAttack: 15
         }
-    }
+    };
 
     var selectedCharacter; //this holds the selected character end user is playing as
     var enemiesAvailable = [] //this holds the remaining objects available to choose from as an enemy
@@ -157,7 +157,8 @@ $(document).ready(function () {
             var counterAttackMessage = defender.name + " attacked you back for " + defender.counterAttack + " damage";
             clearMessage();
 
-            defender.health -= selectedCharacter.attack * turnCounter;
+            defender.hp -= selectedCharacter.attack * turnCounter;
+            
 
             if (defender.hp > 0) {
 
@@ -174,6 +175,7 @@ $(document).ready(function () {
                     clearMessage();
                     restartGame("You have been defeated...GAME OVER!!!");
                     $("#attack-button").off("click");
+                    //Should probably also hide the attack button or switch it over to 'restart'.
                 }
             }
             else {
