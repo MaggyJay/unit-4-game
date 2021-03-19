@@ -60,8 +60,12 @@ $(document).ready(function () {
         var charName = $("<div class='character-name'>").html(character.name);
         var charImage = $("<img alt='image' class='character-image'>").attr("src", character.avatar);
         var charHealth = $("<div class='character-health'>").text(character.hp);
-        charDiv.append(charName).append(charImage).append(charHealth);
-        $(renderArea).append(charDiv);
+        var characterBlock = charDiv.append(charName).append(charImage).append(charHealth);
+        $(renderArea).append(characterBlock);
+        // $(characterBlock).css('display', 'flex');
+        // $(characterBlock).css('align-items', 'center');
+        // $(characterBlock).css('justify-content', 'center');
+        // $(characterBlock).css('margin', 'auto');
     };
 
 
