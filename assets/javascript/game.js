@@ -178,8 +178,9 @@ $(document).ready(function () {
                 if (selectedCharacter.hp <= 0) {
                     clearMessage();
                     restartGame("You have been defeated...GAME OVER!!!");
-                    $("#attack-button").off("click");
-                    //Should probably also hide the attack button or switch it over to 'restart'.
+                    $("#attack-button").off("click").hide();
+                    $("#selected-character").hide();
+                    
                 }
             }
             else {
@@ -193,6 +194,7 @@ $(document).ready(function () {
                 if (killCount >= enemiesAvailable.length) {
                     clearMessage();
                     $("#attack-button").off("click");
+                    $("#attack-button").off("click").hide();
                     restartGame("You Won!!! GAME OVER!!!");
                 }
             }
