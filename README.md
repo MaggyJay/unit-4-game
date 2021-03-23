@@ -6,6 +6,12 @@ Instructions: Choose your character by clicking on their avatar. You will play t
 
 Information
 -------------
+
+Update 03/23/2021
+- This is an older project I am revisiting since I'm becoming more interested in game development. Features that will be added over time include a responsive, attractive layout, background music, and other front-end changes as a starting point.
+
+-------------
+
 I wanted to create a simple RPG game. I decided to choose a game I played as a kid, Final Fantasy VII. The most difficult part I came across were the initial beginning steps. It was hard outlining how the program should be outlined. Most of my time was spent researching out to get the page to update and hold the values related to the character information. My main challenge was figuring out syntax errors such as my properties within my objects being undefined. 
 
 The game was created with HTML, CSS, JavaScript, and jQuery. 
